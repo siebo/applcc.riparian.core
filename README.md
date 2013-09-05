@@ -1,4 +1,4 @@
-ebtjv.mapping
+applcc.riparian.core
 =============
 
-Eastern Brook Trout GIS Mapping  Tool
+AppLCC Riparian Mapping core
