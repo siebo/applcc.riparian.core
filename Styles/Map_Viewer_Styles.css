@@ -1,7 +1,6 @@
-.olcontrolAttribution {
-	position:fixed;
-	bottom:20px;
-	left:5px;
+body {
+	margin:0;
+	padding:0;
 	}
 
 #legend {
@@ -9,21 +8,24 @@
 	font-family:Arial,Helvetica,sans-serif;
 	font-weight: bold;
 	font-size: small;
-	width: 18%;
-	min-width: 200px;
+	width: 300px;
 	height: 99%;
 	background-color: #6495ED;
 	border-style: solid;
 	border-color: #000000;
 	border-width: 2px;
-	float: left;
-	overflow-y:scroll;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	overflow-y: scroll;
 	}
 
 #panel {
-	width: 80%;
+	position: fixed;
+	left: 314px;
+	top: 0px;
+	width: 200px;
 	height: 34px;
-	float: left;
 	background-color: #A9A9A9;
 	border-style: solid;
 	border-bottom-style: none;
@@ -33,35 +35,63 @@
 	}
 
 #map {
-	width: 80%;
-	height: 91%;
+	position: fixed;
+	left: 314px;
+	top: 35px;
+	width: 200px;
+	height: 100px;
 	max-height:91%;
 	border-style: solid;
 	border-left-style: none;
 	border-width: 2px;
 	border-color: #000000;
-	float:left;
+	}
+
+#measures {
+	position: fixed;
+	left: 314px;
+	bottom: 0px;
+	width: 200px;
+	height: 30px;
 	}
 
 #scale-id {
 	width: auto;
-	height: 25px;
-	margin-top: 2px;
+	height: 30px;
+	margin-top: 5px;
 	margin-left: 5px;
 	font-family:Arial,Helvetica,sans-serif;
 	font-size: small;
-	float:left;
+	float: left;
 	}
 
 #scaleline-id {
 	width: auto;
-	height: 25px;
+	height: 30px;
 	font-family:Arial,Helvetica,sans-serif;
 	font-size: xx-small;
 	float: left;
-	margin-left: 10%;
 	margin-top: 2px;
 	font-weight: bold;
+	}
+
+#coords {
+	width: auto;
+	height: 30px;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size: xx-small;
+	margin-top: 2px;
+	}
+
+#location {
+	width: auto;
+	height: 25px;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size: small;
+	float: right;
+	margin-right: 9px;
+	margin-top: 5px;
+	bottom: 0;
 	}
 
 #layerList {
@@ -77,35 +107,81 @@
 	position: fixed;
 	top: 20px;
 	left: 20px;
-	z-index: 1000;
+	z-index: 2000;
 	visibility: hidden;
 	color: #FFFFFF;
 	padding-right: 10px;
 	}
 
-#mapUnits {
+#opacity {
 	width: auto;
-	height: 25px;
+	height: auto;
 	font-family:Arial,Helvetica,sans-serif;
 	font-size: small;
-	float: left;
-	margin-left: 10%;
-	margin-top: 2px;
-	}	
-
-#location {
-	width: auto;
-	height: 25px;
-	font-family:Arial,Helvetica,sans-serif;
-	font-size: small;
-	float: right;
-	margin-right: 9px;
-	margin-top: 2px;
-	bottom: 0;
+	font-weight: bold;
+	background-color: #0A077D;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #FFFFFF;
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	z-index: 2001;
+	visibility: hidden;
+	color: #FFFFFF;
+	padding-top: 13px;
 	}
 
+#download {
+	width: auto;
+	height: auto;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size: small;
+	font-weight: bold;
+	background-color: #0A077D;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #FFFFFF;
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	z-index: 2002;
+	visibility: hidden;
+	color: #FFFFFF;
+	padding-top: 13px;
+	}
+
+#riparian {
+	width: auto;
+	height: auto;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size: small;
+	font-weight: bold;
+	background-color: #0A077D;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #FFFFFF;
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	z-index: 2003;
+	visibility: hidden;
+	color: #FFFFFF;
+	padding-top: 13px;
+	}
+
+#formOpacity {
+	padding-left: 10px;
+	padding-right: 10px;
+	}
+
+#slider {
+	padding-top: 5px;
+	}
+
+
 .olControlZoomInItemInactive {
-    	background-image: url("../images/zoom-plus-mini.png");
+    	background-image: url("../Images/zoom-plus-mini.png");
 	background-repeat: no-repeat;
     	border: 2px solid #FFFFFF;
     	float: left;
@@ -123,7 +199,7 @@
 	}
 
 .olControlZoomOutItemInactive {
-    	background-image: url("../images/zoom-minus-mini.png");
+    	background-image: url("../Images/zoom-minus-mini.png");
     	border: 2px solid #FFFFFF;
     	float: left;
 	height: 24px;
@@ -139,7 +215,7 @@
 	}
 
 .olControlZoomToMaxExtentItemInactive {
-    	background-image: url("../images/zoom-world-mini.png");
+    	background-image: url("../Images/zoom-world-mini.png");
     	border: 2px solid #FFFFFF;
     	float: left;
 	height: 24px;
@@ -155,7 +231,7 @@
 	}
 
 .olControlZoomBoxItemInactive { 
-    	background-image: url("../images/drag-rectangle-off.png");
+    	background-image: url("../Images/drag-rectangle-off.png");
     	border: 2px solid #FFFFFF;
     	float: left;
 	height: 24px;
@@ -171,7 +247,7 @@
 	}
 
 .olControlZoomBoxItemActive { 
-    	background-image: url("../images/drag-rectangle-on.png");
+    	background-image: url("../Images/drag-rectangle-on.png");
     	border: 2px solid #FFFFFF;
     	float: left;
 	height: 24px;
@@ -187,7 +263,7 @@
 	}
 
 .olControlZoomBoxOutItemInactive { 
-    	background-image: url("../images/drag-rectangle-out-off.png");
+    	background-image: url("../Images/drag-rectangle-out-off.png");
     	border: 2px solid #FFFFFF;
     	float: left;
 	height: 24px;
@@ -203,7 +279,7 @@
 	}
 
 .olControlZoomBoxOutItemActive { 
-    	background-image: url("../images/drag-rectangle-out-on.png");
+    	background-image: url("../Images/drag-rectangle-out-on.png");
     	border: 2px solid #FFFFFF;
     	float: left;
 	height: 24px;
@@ -219,7 +295,7 @@
 	}
 
 .olControlNavigationItemInactive { 
-    	background-image: url("../images/panning-hand-off.png");
+    	background-image: url("../Images/panning-hand-off.png");
     	border: 2px solid #FFFFFF;
     	float: left;
 	height: 24px;
@@ -235,7 +311,7 @@
 	}
 
 .olControlNavigationItemActive { 
-    	background-image: url("../images/panning-hand-on.png");
+    	background-image: url("../Images/panning-hand-on.png");
     	border: 2px solid #FFFFFF;
     	float: left;
 	height: 24px;
@@ -251,7 +327,7 @@
 	}
 
 .olControlNavHist {
-	background-image: url("../images/navigation_history.png");
+	background-image: url("../Images/navigation_history.png");
 	background-repeat: no-repeat;
 	float: left;
 	width: 24px;
@@ -284,7 +360,7 @@
 	}
 
 .olControlWMSGetFeatureInfoItemActive {
-    	background-image: url("../images/identify-on.png");
+    	background-image: url("../Images/identify-on.png");
     	border: 2px solid #FFFFFF;
     	float: left;
 	height: 24px;
@@ -299,7 +375,7 @@
 	}
 
 .olControlWMSGetFeatureInfoItemInactive {
-    	background-image: url("../images/identify-off.png");
+    	background-image: url("../Images/identify-off.png");
     	border: 2px solid #FFFFFF;
     	float: left;
 	height: 24px;
@@ -314,7 +390,7 @@
 	}
 
 .olControlIdLayerItemActive {
-	background-image: url("../images/expand.png");
+	background-image: url("../Images/expand.png");
     	border: 2px solid #FFFFFF;
     	float: left;
 	height: 24px;
@@ -330,7 +406,7 @@
 	}
 
 .olControlIdLayerItemInactive {
-	background-image: url("../images/expand.png");
+	background-image: url("../Images/expand.png");
     	border: 2px solid #FFFFFF;
     	float: left;
 	height: 24px;
@@ -345,11 +421,8 @@
     	border-color: #FF0000;
 	}
 
-
-
-
 .olControlGetFeatureItemActive {
-    	background-image: url("../images/select_feature-on.png");
+    	background-image: url("../Images/select_feature-on.png");
     	border: 2px solid #FFFFFF;
     	float: left;
 	height: 24px;
@@ -364,7 +437,7 @@
 	}
 
 .olControlGetFeatureItemInactive {
-    	background-image: url("../images/select_feature-off.png");
+    	background-image: url("../Images/select_feature-off.png");
     	border: 2px solid #FFFFFF;
     	float: left;
 	height: 24px;
@@ -379,7 +452,7 @@
 	}
 
 .olControlFSLayerItemActive {
-	background-image: url("../images/expand.png");
+	background-image: url("../Images/expand.png");
     	border: 2px solid #FFFFFF;
     	float: left;
 	height: 24px;
@@ -395,7 +468,7 @@
 	}
 
 .olControlFSLayerItemInactive {
-	background-image: url("../images/expand.png");
+	background-image: url("../Images/expand.png");
     	border: 2px solid #FFFFFF;
     	float: left;
 	height: 24px;
@@ -410,11 +483,8 @@
     	border-color: #FF0000;
 	}
 
-
-
-
 .olControlDownloadItemActive {
-    	background-image: url("../images/download-on.png");
+    	background-image: url("../Images/download-on.png");
     	border: 2px solid #FFFFFF;
     	float: left;
 	height: 24px;
@@ -430,7 +500,7 @@
 	}
 
 .olControlDownloadItemInactive {
-    	background-image: url("../images/download-off.png");
+    	background-image: url("../Images/download-off.png");
     	border: 2px solid #FFFFFF;
     	float: left;
 	height: 24px;
@@ -442,6 +512,70 @@
         }
 
 .olControlDownloadItemInactive:hover {
+    	border-color: #FF0000;
+	}
+
+.olControlRiparianItemActive {
+    	background-image: url("../Images/tree2_small.png");
+    	border: 2px solid #FFFFFF;
+    	float: left;
+	height: 24px;
+	width: 24px;
+    	margin-top: 3px;
+    	margin-right: 5px;
+	margin-bottom: 5px;
+	cursor : pointer;
+        }
+
+.olControlRiparianItemActive:hover {
+    	border-color: #FF0000;
+	}
+
+.olControlRiparianItemInactive {
+    	background-image: url("../Images/tree2_small.png");
+    	border: 2px solid #FFFFFF;
+    	float: left;
+	height: 24px;
+	width: 24px;
+    	margin-top: 3px;
+    	margin-right: 5px;
+	margin-bottom: 5px;
+	cursor : pointer;
+        }
+
+.olControlRiparianItemInactive:hover {
+    	border-color: #FF0000;
+	}
+
+.olControlClearItemActive {
+    	background-image: url("../Images/unselect_feature_small.png");
+    	border: 2px solid #FFFFFF;
+    	float: left;
+	height: 24px;
+	width: 24px;
+    	margin-top: 3px;
+    	margin-right: 5px;
+	margin-bottom: 5px;
+	cursor : pointer;
+        }
+
+.olControlClearItemActive:hover {
+    	border-color: #FF0000;
+	}
+
+.olControlClearItemInactive {
+    	background-image: url("../Images/unselect_feature_small.png");
+    	border: 2px solid #FFFFFF;
+    	float: left;
+	height: 24px;
+	width: 24px;
+    	margin-top: 3px;
+    	margin-right: 5px;
+	margin-bottom: 5px;
+	cursor : pointer;
+        }
+
+.olControlClearItemInactive:hover {
     	border-color: #FF0000;
 	}
 
